@@ -1,0 +1,216 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --color-primary: #0A3C2F; /* Deep Forest Green (Dark) */
+    --color-secondary: #EADBC8; /* Cream/Beige (Light Accent) */
+    --color-cta: #D4A325; /* Gold/Mustard (CTA) */
+    --color-text: #333;
+    --color-white: #fff;
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header / Navigation --- */
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 15px 0;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+/* --- CTA Button Styles --- */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.primary {
+    background-color: var(--color-cta);
+    color: var(--color-primary); /* Dark text on Gold button */
+}
+
+.primary:hover {
+    background-color: #E6B543;
+}
+
+.secondary {
+    background-color: var(--color-cta);
+    color: var(--color-primary);
+}
+
+.secondary:hover {
+    background-color: #E6B543;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    /* Replace 'your-hero-image.jpg' with the actual path to your professional, modest team photo */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('your-hero-image.jpg') no-repeat center center/cover;
+    height: 60vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.hero-content {
+    padding-top: 50px;
+}
+
+.headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.subhead {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* --- VALUE PROPOSITION SECTION --- */
+.value-prop {
+    padding: 80px 0;
+    background-color: var(--color-white);
+}
+
+.prop-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.prop-text h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.prop-list .item {
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+/* --- HIGHLIGHTS & TESTIMONIALS SECTION --- */
+.highlights-testimonial {
+    padding: 80px 0;
+    background-color: var(--color-secondary);
+}
+
+.highlights-testimonial h3 {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.highlights {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-item {
+    flex-basis: calc(50% - 10px);
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.testimonial {
+    flex: 1;
+    padding: 40px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.quote {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.source {
+    font-style: normal;
+    font-weight: 600;
+    text-align: right;
+    display: block;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    margin-top: 25px;
+}
+
+.footer-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- Basic Responsiveness --- */
+@media (max-width: 768px) {
+    .prop-grid {
+        grid-template-columns: 1fr;
+    }
+    .content-row {
+        flex-direction: column;
+    }
+    .headline {
+        font-size: 2.5rem;
+    }
+    .highlight-item {
+        flex-basis: 100%;
+    }
+}
