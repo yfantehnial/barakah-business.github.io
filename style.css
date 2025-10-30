@@ -69,15 +69,36 @@ body {
 
 /* --- HERO SECTION --- */
 .hero {
-    /* UPDATED: Path now points up one level, then into the 'images' folder */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/your-hero-image.jpg') no-repeat center center/cover;
+    /* **REMOVED** the background image from here */
+    position: relative; /* Essential for positioning the image container */
     height: 60vh; 
     display: flex;
     align-items: center;
     color: var(--color-white);
+    overflow: hidden; /* Ensures the image doesn't leak out */
+}
+
+/* New styles for the image and overlay */
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place image layer below content */
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Equivalent to background-size: cover */
+    /* Add the dark overlay directly to the image container */
+    filter: brightness(60%); /* A simple way to darken the image */
 }
 
 .hero-content {
+    position: relative; /* Essential to place content above the image */
+    z-index: 2; /* Place content layer above image */
     padding-top: 50px;
 }
 
